@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{color: blue;}
+        body{text-align: center;}
+        button{
+            background-color: antiquewhite;
+            color: aliceblue;
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic DOM manipulation</h1>
+    <h2>DOM getElementByClassName() Method</h2>
+    <div>
+        <button onclick="yellow()" class="yellow">
+        Click to  Change to yellow button</button>
+        <br>
+        <button onclick="green()" class="green">
+            Click to  Change to green button</button>
+            <br>
+    </div>
+    <script>
+        function yellow(){
+            document.getElementsByClassName('yellow')[0].style.backgroundColor='yellow';
+        }
+        function green(){
+            var element=document.getElementsByClassName('green');
+            for(var i=0; i<element.length; i++){
+                element[i].style.backgroundColor='green';
+            }
+        }
+    </script>
+</body>
+</html>
